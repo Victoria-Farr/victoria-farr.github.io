@@ -1,0 +1,219 @@
+body {
+    background-color: #F9F5F1;
+    font-family: "Martian Mono", monospace;
+    font-weight: 200;
+    font-size: 16px;
+    color: #302D2D;
+}
+
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, .projects-list {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 111px;
+    letter-spacing: 3px;
+    line-height: 111%;
+    margin-bottom: 33px;
+}
+
+h2 {
+    font-size: 55px;
+    margin: 11px 0;
+}
+
+h3 {
+    color: #ED0C16;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+header {
+    /*top: 55px;*/
+    position: relative;
+    margin-bottom: 155px;
+    background-image: url('../img/background-clouds-3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -166px;
+}
+
+header li {
+    text-transform: uppercase;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    /*background-color: #F1F1EF;*/
+    font-weight: 200;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    /*background-image: url('../img/background-clouds-3.png');*/
+    background-size: cover;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 22px;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+nav ul {
+    margin: 0 auto;
+    text-align: center;
+    padding: 22px;
+}
+
+nav li a {
+    text-decoration: none;
+    
+}
+
+p {
+    line-height:170%;
+    margin-top: 22px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+  color: #302D2D;
+}
+
+/* visited link */
+a:visited {
+  color: #302D2D;
+}
+
+/* mouse over link */
+a:hover {
+  color: #ED0C16;
+}
+
+/* selected link */
+a:active {
+  color: #CB912F;
+}
+
+ul li {
+    list-style: none;
+    margin: 22px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 88px;
+    background-image: url('../img/clouds.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 22px;
+}
+
+footer a:hover {
+    color: red;
+}
+
+li.empty {
+    width: 111px;
+    border-top: 1px solid #D44C47;
+    top: -5px;
+    position: relative;
+
+}
+
+/* ————————— HEADER ————————— */
+
+.interesting-facts-list {
+    font-family: "Martian Mono", monospace;
+    font-weight: 200;
+    margin-bottom: 77px;
+}
+
+.intro-img {
+    box-shadow: 1px 2px 30px rgba(0,0,0,0.2);
+    margin-top: 50px;
+}
+
+/* ————————— BUTTONS ————————— */
+
+.button {
+    border: 1px solid #302D2D;
+    border-radius: 10px;
+    color: #302D2D;
+    display: inline-block;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.5em;
+    padding: 11px 22px;
+    text-decoration: none;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.button:hover {
+    background: #302D2D;
+    color: #F9F5F1;
+}
+
+/* ——————— PROJECTS ——————— */
+
+.project .button {
+    margin-top: 11px;
+}
+
+.projects-list {
+    font-size: 64px;
+    text-align: right;
+    margin-right: 128px;
+    margin-bottom: 77px;
+     background-image: url("../img/matchbox-background.png");
+}
+
+.project {
+    margin: 30px 0;
+    padding: 77px;
+}
+
+.gray {
+    /*for the projects with gray background*/
+    background-color: #F0EDED;
+}
+
+.last {
+    /*for the last project / footer gap */
+    margin-bottom: -10px;
+}
+
+.right {
+    /* for the projects with right-aligned text */
+    text-align: right;
+}
+
+/* ——————— FOOTER ——————— */
+
+.footer-img {
+    max-width: 22%;
+    margin-top: 111px;
+}
