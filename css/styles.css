@@ -54,6 +54,11 @@ img {
     max-width: 100%;
 }
 
+p {
+    line-height:170%;
+    margin-top: 22px;
+}
+
 nav {
     /*background-color: #F1F1EF;*/
     font-weight: 200;
@@ -80,37 +85,119 @@ nav ul {
 
 nav li a {
     text-decoration: none;
-    
+    color: #37352F;
+}
+/* link styling trial */
+
+.red a {
+  color: #ED0C16;
+  text-decoration: none;
+  background-image: linear-gradient(#F9F5F1, #F9F5F1),
+    linear-gradient(#37352F, #37352F),
+    linear-gradient(#ED0C16, #ED0C16);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
 }
 
-p {
-    line-height:170%;
-    margin-top: 22px;
+.red a:hover {
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+  color: #ED0C16;
+}
+
+.orange a {
+  color: #37352F;
+  text-decoration: none;
+  background-image: linear-gradient(#F9F5F1, #F9F5F1),
+    linear-gradient(#37352F, #37352F),
+    linear-gradient(#D9730D, #D9730D);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+.orange a:hover {
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+  color: #D9730D;
+}
+
+.yellow a {
+  color: #37352F;
+  text-decoration: none;
+  background-image: linear-gradient(#F9F5F1, #F9F5F1),
+    linear-gradient(#37352F, #37352F),
+    linear-gradient(#CB912F, #CB912F);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+.yellow a:hover {
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+  color: #CB912F;
+}
+
+.green a {
+  color: #37352F;
+  text-decoration: none;
+  background-image: linear-gradient(#F9F5F1, #F9F5F1),
+    linear-gradient(#37352F, #37352F),
+    linear-gradient(#448361, #448361);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+.green a:hover {
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+  color: #448361;
+}
+
+.blue a {
+  color: #37352F;
+  text-decoration: none;
+  background-image: linear-gradient(#F9F5F1, #F9F5F1),
+    linear-gradient(#37352F, #37352F),
+    linear-gradient(#337EA9, #337EA9);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+.blue a:hover {
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+  color: #337EA9;
 }
 
 a {
     text-decoration: none;
 }
 
-/* unvisited link */
 a:link {
   color: #302D2D;
 }
 
-/* visited link */
 a:visited {
   color: #302D2D;
 }
 
-/* mouse over link */
 a:hover {
   color: #ED0C16;
 }
 
-/* selected link */
 a:active {
   color: #CB912F;
-}
+} 
 
 ul li {
     list-style: none;
@@ -176,6 +263,7 @@ li.empty {
     background: #302D2D;
     color: #F9F5F1;
 }
+
 
 /* ——————— PROJECTS ——————— */
 
