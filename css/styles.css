@@ -179,8 +179,27 @@ nav li a {
   color: #337EA9;
 }
 
+.purple a {
+  color: #9065B0;
+  text-decoration: none;
+  background-image: linear-gradient(#F9F5F1, #F9F5F1),
+    linear-gradient(#37352F, #37352F),
+    linear-gradient(#9065B0, #9065B0);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+.purple a:hover {
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+  color: #9065B0;
+}
+
 a {
     text-decoration: none;
+    color: #ED0C16;
 }
 
 a:link {
@@ -188,7 +207,7 @@ a:link {
 }
 
 a:visited {
-  color: #302D2D;
+  color: #ED0C16;
 }
 
 a:hover {
@@ -219,7 +238,7 @@ footer ul li {
 }
 
 footer a:hover {
-    color: red;
+    color: #ED0C16;
 }
 
 li.empty {
@@ -266,6 +285,9 @@ li.empty {
 
 
 /* ——————— PROJECTS ——————— */
+.projects-list p {
+    color: #F9F5F1;
+}
 
 .project .button {
     margin-top: 11px;
