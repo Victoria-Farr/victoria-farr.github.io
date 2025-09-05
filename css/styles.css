@@ -87,115 +87,8 @@ nav li a {
     text-decoration: none;
     color: #37352F;
 }
-/* link styling trial */
 
-.red a {
-  color: #ED0C16;
-  text-decoration: none;
-  background-image: linear-gradient(#F9F5F1, #F9F5F1),
-    linear-gradient(#37352F, #37352F),
-    linear-gradient(#ED0C16, #ED0C16);
-  background-size: 20px 2px, 100% 2px, 0 2px;
-  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 2s linear, background-position 2s linear;
-}
 
-.red a:hover {
-  background-size: 20px 2px, 0 2px, 100% 2px;
-  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
-  color: #ED0C16;
-}
-
-.orange a {
-  color: #37352F;
-  text-decoration: none;
-  background-image: linear-gradient(#F9F5F1, #F9F5F1),
-    linear-gradient(#37352F, #37352F),
-    linear-gradient(#D9730D, #D9730D);
-  background-size: 20px 2px, 100% 2px, 0 2px;
-  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 2s linear, background-position 2s linear;
-}
-
-.orange a:hover {
-  background-size: 20px 2px, 0 2px, 100% 2px;
-  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
-  color: #D9730D;
-}
-
-.yellow a {
-  color: #37352F;
-  text-decoration: none;
-  background-image: linear-gradient(#F9F5F1, #F9F5F1),
-    linear-gradient(#37352F, #37352F),
-    linear-gradient(#CB912F, #CB912F);
-  background-size: 20px 2px, 100% 2px, 0 2px;
-  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 2s linear, background-position 2s linear;
-}
-
-.yellow a:hover {
-  background-size: 20px 2px, 0 2px, 100% 2px;
-  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
-  color: #CB912F;
-}
-
-.green a {
-  color: #37352F;
-  text-decoration: none;
-  background-image: linear-gradient(#F9F5F1, #F9F5F1),
-    linear-gradient(#37352F, #37352F),
-    linear-gradient(#448361, #448361);
-  background-size: 20px 2px, 100% 2px, 0 2px;
-  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 2s linear, background-position 2s linear;
-}
-
-.green a:hover {
-  background-size: 20px 2px, 0 2px, 100% 2px;
-  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
-  color: #448361;
-}
-
-.blue a {
-  color: #37352F;
-  text-decoration: none;
-  background-image: linear-gradient(#F9F5F1, #F9F5F1),
-    linear-gradient(#37352F, #37352F),
-    linear-gradient(#337EA9, #337EA9);
-  background-size: 20px 2px, 100% 2px, 0 2px;
-  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 2s linear, background-position 2s linear;
-}
-
-.blue a:hover {
-  background-size: 20px 2px, 0 2px, 100% 2px;
-  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
-  color: #337EA9;
-}
-
-.purple a {
-  color: #9065B0;
-  text-decoration: none;
-  background-image: linear-gradient(#F9F5F1, #F9F5F1),
-    linear-gradient(#37352F, #37352F),
-    linear-gradient(#9065B0, #9065B0);
-  background-size: 20px 2px, 100% 2px, 0 2px;
-  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 2s linear, background-position 2s linear;
-}
-
-.purple a:hover {
-  background-size: 20px 2px, 0 2px, 100% 2px;
-  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
-  color: #9065B0;
-}
 
 a {
     text-decoration: none;
@@ -321,9 +214,120 @@ li.empty {
     text-align: right;
 }
 
+/* ——————— PROJECTS LIST LINK STYLING ——————— */
+
+.red a {
+  color: #ED0C16;
+  text-decoration: none;
+  background-image: linear-gradient(#F9F5F1, #F9F5F1),
+    linear-gradient(#37352F, #37352F),
+    linear-gradient(#ED0C16, #ED0C16);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+.red a:hover {
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+  color: #ED0C16;
+}
+
+.orange a {
+  color: #37352F;
+  text-decoration: none;
+  background-image: linear-gradient(#F9F5F1, #F9F5F1),
+    linear-gradient(#37352F, #37352F),
+    linear-gradient(#D9730D, #D9730D);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+.orange a:hover {
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+  color: #D9730D;
+}
+
+.yellow a {
+  color: #37352F;
+  text-decoration: none;
+  background-image: linear-gradient(#F9F5F1, #F9F5F1),
+    linear-gradient(#37352F, #37352F),
+    linear-gradient(#CB912F, #CB912F);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+.yellow a:hover {
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+  color: #CB912F;
+}
+
+.green a {
+  color: #37352F;
+  text-decoration: none;
+  background-image: linear-gradient(#F9F5F1, #F9F5F1),
+    linear-gradient(#37352F, #37352F),
+    linear-gradient(#448361, #448361);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+.green a:hover {
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+  color: #448361;
+}
+
+.blue a {
+  color: #37352F;
+  text-decoration: none;
+  background-image: linear-gradient(#F9F5F1, #F9F5F1),
+    linear-gradient(#37352F, #37352F),
+    linear-gradient(#337EA9, #337EA9);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+.blue a:hover {
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+  color: #337EA9;
+}
+
+.purple a {
+  color: #9065B0;
+  text-decoration: none;
+  background-image: linear-gradient(#F9F5F1, #F9F5F1),
+    linear-gradient(#37352F, #37352F),
+    linear-gradient(#9065B0, #9065B0);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+.purple a:hover {
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+  color: #9065B0;
+}
+
 /* ——————— FOOTER ——————— */
 
 .footer-img {
     max-width: 22%;
     margin-top: 111px;
 }
+
