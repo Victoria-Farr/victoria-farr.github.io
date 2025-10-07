@@ -47,6 +47,7 @@ h2 {
     font-weight: normal;
     margin: 0;
     letter-spacing: .1rem;
+    color:#E44031;
 }
 
 h3 {
@@ -155,22 +156,18 @@ footer a {
 footer a:link {
   color: #E44031;
 }
-
 /* visited link */
 footer a:visited {
   color: #E44031;
 }
-
 /* mouse over link */
 footer a:hover {
   color: #FF4837;
 }
-
 /* selected link */
 footer a:active {
   color: #FF4837;
 }
-
 
 footer h1 {
     font-size: 4rem;
