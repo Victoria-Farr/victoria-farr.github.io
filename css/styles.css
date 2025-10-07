@@ -42,11 +42,11 @@ h1 {
 
 h2 {
     font-family: AwesomeSerif-BoldExtraTall, serif;
-    text-transform: uppercase;
     letter-spacing: .1rem;
     font-size: 3.5rem;
     font-weight: normal;
     margin: 0;
+    letter-spacing: .1rem;
 }
 
 h3 {
