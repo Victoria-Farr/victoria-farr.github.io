@@ -1,331 +1,448 @@
 body {
-    background-color: #F9F5F1;
-    font-family: "Martian Mono", monospace;
-    font-weight: 200;
-    font-size: 16px;
-    color: #302D2D;
-}
-
-body, ul {
+    font-family: PPRightGroteskMono-Regular, serif;
+    font-weight: normal;
     margin: 0;
     padding: 0;
-}
-
-h1, h2, .projects-list {
-    font-family: "Instrument Serif", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-h1 {
-    font-size: 111px;
-    letter-spacing: 3px;
-    line-height: 111%;
-    margin-bottom: 33px;
-}
-
-h2 {
-    font-size: 55px;
-    margin: 11px 0;
-}
-
-h3 {
-    color: #ED0C16;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 1.125rem;
+    background-color: #F9F5F1;
+    color:#1A0705;
 }
 
 header {
-    /*top: 55px;*/
+    top: 0;
     position: relative;
-    margin-bottom: 155px;
-    background-image: url('../img/background-clouds-3.png');
+    background-image: url(../img/header-background-2.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: -166px;
+    margin-bottom: 8rem;
 }
 
-header li {
+header h1 {
+    margin-top: 3rem;
+}
+
+header img {
+    margin-top: 5rem;
+    padding-left: 8rem;
+    padding-right: 2rem;
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+h1 {
+    font-family: AwesomeSerif-BoldTall, serif;
+    font-weight: normal;
+    font-size: 9rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 0;
+    color: #E44031;
+}
+
+h2 {
+    font-family: AwesomeSerif-BoldExtraTall, serif;
     text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size: 3.5rem;
+    font-weight: normal;
+    margin: 0;
 }
 
-img {
-    max-width: 100%;
+h3 {
+    font-family: AwesomeSerifItalic-LightTall, serif;
+    font-weight: normal;
+    letter-spacing: .1rem;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 2rem;
 }
 
 p {
-    line-height:170%;
-    margin-top: 22px;
+    line-height: 1.8rem;
+    font-size: 1rem;
+    padding-right: 0 2rem 0 0;
 }
 
+
+
 nav {
-    /*background-color: #F1F1EF;*/
-    font-weight: 200;
+    text-transform: uppercase;
     position: fixed;
     z-index: 1;
     width: 100%;
-    /*background-image: url('../img/background-clouds-3.png');*/
-    background-size: cover;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 22px;
-    padding: 0;
-    text-transform: uppercase;
-    font-size: 1em;
+    background-image: url(../img/header-background-2.png); 
 }
 
 nav ul {
     margin: 0 auto;
     text-align: center;
-    padding: 22px;
+    padding: 1rem;
 }
 
-nav li a {
+nav ul li {
+    display: inline-block;
+    letter-spacing: .1rem;
+    padding: 0 1rem;
+    text-decoration-thickness: 1px;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+    text-underline-offset: .5rem;
+}
+
+
+nav a:link {
     text-decoration: none;
-    color: #37352F;
+    color:#1A0705;
+}
+nav a:visited {
+    color:#1A0705;
+}
+nav a:hover {
+    color:#E44031;
+}
+nav a:active {
+    color: #FF4837;
 }
 
-
-
-a {
-    text-decoration: none;
-    color: #ED0C16;
+/* unvisited link */
+a:link {
+  color: #E44031;
 }
 
-
-
+/* visited link */
 a:visited {
-  color: #ED0C16;
+  color: #E44031;
 }
 
+/* mouse over link */
 a:hover {
-  color: #ED0C16;
+  color: #FF4837;
 }
 
+/* selected link */
 a:active {
-  color: #CB912F;
-} 
+  color: #FF4837;
+}
 
-ul li {
-    list-style: none;
-    margin: 22px 0;
+li.empty {
+    width: 7rem;
+    border-top: 1px solid #1A0705;
+    top: -.3rem;
+    position: relative;
 }
 
 footer {
-    text-align: center;
-    padding: 88px;
-    background-image: url('../img/clouds.png');
+    background-image: url('../img/footer-background.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    margin-top: 0;
+}
+
+footer a {
+    text-decoration-thickness: .2rem;
+    text-underline-offset: .5rem;
+}
+/* unvisited link */
+footer a:link {
+  color: #E44031;
+}
+
+/* visited link */
+footer a:visited {
+  color: #E44031;
+}
+
+/* mouse over link */
+footer a:hover {
+  color: #FF4837;
+}
+
+/* selected link */
+footer a:active {
+  color: #FF4837;
+}
+
+
+footer h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    padding: 4rem 0 2rem 0;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
 }
 
 footer ul li {
     display: inline-block;
-    margin: 0 auto;
-    padding: 22px;
+    padding-top: 2rem;
+    padding-right: 3rem;
 }
 
-footer a:hover {
-    color: #ED0C16;
+img {
+    max-width: 100%;
+}
+/* Pangram Right Grotesk Mono */
+@font-face {
+    font-family: 'PPRightGroteskMono-Regular';
+    src: url('../fonts/PPRightGroteskMono-Regular.otf') format ('otf');
 }
 
-li.empty {
-    width: 111px;
-    border-top: 1px solid #D44C47;
-    top: -5px;
-    position: relative;
+/* Awesome Serif — Regular */
+@font-face {
+    font-family: 'AwesomeSerif-BoldExtraTall';
+    src: url('../fonts/AwesomeSerif-BoldExtraTall.otf') format('otf');
+    font-style: normal;
+    }
 
+@font-face {
+    font-family: 'AwesomeSerif-BoldRegular';
+    src: url('../fonts/AwesomeSerif-BoldRegular.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerif-BoldTall';
+    src: url('../fonts/AwesomeSerif-BoldTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerif-ExtraTall';
+    src: url('../fonts/AwesomeSerif-ExtraTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerif-LightExtraTall';
+    src: url('../fonts/AwesomeSerif-LightExtraTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerif-LightRegular';
+    src: url('../fonts/AwesomeSerif-LightRegular.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerif-LightTall';
+    src: url('../fonts/AwesomeSerif-LightTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerif-MediumExtraTall';
+    src: url('../fonts/MediumExtraTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerif-MediumRegular';
+    src: url('../fonts/AwesomeSerif-MediumRegular.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerif-MediumTall';
+    src: url('../fonts/MediumTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerif-Regular';
+    src: url('../fonts/Regular.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerif-SemBdExtraTall';
+    src: url('../fonts/AwesomeSerif-SemBdExtraTall.otf') format('otf');
+    font-style: normal;
+    }
+ 
+@font-face {
+    font-family: 'AwesomeSerif-SemiBoldRegular';
+    src: url('../fonts/AwesomeSerif-SemiBoldRegular.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerif-SemiBoldTall';
+    src: url('../fonts/AwesomeSerif-SemiBoldTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerif-Tall';
+    src: url('../fonts/AwesomeSerif-Tall.otf') format('otf');
+    font-style: normal;
+    }
+
+/* ------Awesome Serif — Italic ------ */
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-BdExtraTall';
+    src: url('../fonts/AwesomeSerifItalic-BdExtraTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-BdRegular';
+    src: url('../fonts/AwesomeSerifItalic-BdRegular.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-BoldTall';
+    src: url('../fonts/AwesomeSerifItalic-BoldTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-ExtraTall';
+    src: url('../fonts/AwesomeSerifItalic-ExtraTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-LightReg';
+    src: url('../fonts/AwesomeSerifItalic-LightReg.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-LightTall';
+    src: url('../fonts/AwesomeSerifItalic-LightTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-LtExtraTall';
+    src: url('../fonts/AwesomeSerifItalic-LtExtraTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-MdExtraTall';
+    src: url('../fonts/AwesomeSerifItalic-MdExtraTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-MediumTall';
+    src: url('../fonts/AwesomeSerifItalic-MediumTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-MedRegular';
+    src: url('../fonts/AwesomeSerifItalic-MedRegular.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-Regular';
+    src: url('../fonts/AwesomeSerifItalic-Regular.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-SemBdTall';
+    src: url('../fonts/AwesomeSerifItalic-SemBdTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-SmExtraTall';
+    src: url('../fonts/AwesomeSerifItalic-SmExtraTall.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-SmRegular';
+    src: url('../fonts/AwesomeSerifItalic-SmRegular.otf') format('otf');
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'AwesomeSerifItalic-Tall';
+    src: url('../fonts/AwesomeSerifItalic-Tall.otf') format('otf');
+    font-style: normal;
+    }
+
+/* CLASSES */
+.beige {
+    background-color: #F2E6DA;
 }
-
-/* ————————— HEADER ————————— */
-
-.interesting-facts-list {
-    font-family: "Martian Mono", monospace;
-    font-weight: 200;
-    margin-bottom: 77px;
+.bestie {
+    font-size: 1.5rem;
 }
-
-.intro-img {
-    box-shadow: 1px 2px 30px rgba(0,0,0,0.2);
-    margin-top: 50px;
-}
-
-/* ————————— BUTTONS ————————— */
 
 .button {
-    border: 1px solid #302D2D;
-    border-radius: 10px;
-    color: #302D2D;
-    display: inline-block;
-    font-family: "Instrument Serif", serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 1.5em;
-    padding: 11px 22px;
+    border: 1px solid #1A0705;
+    padding: .7rem;
+    font-family: AwesomeSerifItalic-LightTall, serif;
     text-decoration: none;
-    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+    letter-spacing: .1rem;
+    display: inline-block;
+    color:#1A0705;
+    transition: background 0.5s ease-in-out;
 }
 
 .button:hover {
-    background: #302D2D;
-    color: #F9F5F1;
+    background: #1A0705;
 }
 
-
-/* ——————— PROJECTS ——————— */
-.projects-list p {
-    color: #F9F5F1;
+.hero-text {
+    font-family: AwesomeSerifItalic-LightTall, serif;
+    font-size: 8rem;
+    color: #1A0705;
+    display: block;
+    margin-bottom: -2.5rem;
+    padding-bottom: 0;
 }
 
-.project .button {
-    margin-top: 11px;
-}
-
-.projects-list {
-    font-size: 64px;
-    text-align: right;
-    margin-right: 128px;
-    margin-bottom: 77px;
-     background-image: url("../img/matchbox-background.png");
+.footer-heading {
+    color: #1A0705;
+    font-family: AwesomeSerifItalic-LightTall, serif;
+    font-size: 4rem;
+    padding-top: 4rem;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .project {
-    margin: 30px 0;
-    padding: 77px;
+    margin-top: 3rem;
+    padding: 3rem 0;
 }
 
-.gray {
-    /*for the projects with gray background*/
-    background-color: #F0EDED;
+.small-caps {
+    font-variant: small-caps;
 }
 
-.last {
-    /*for the last project / footer gap */
-    margin-bottom: -10px;
+.red-text-subheading-header {
+    color:#E44031
 }
 
-.right {
-    /* for the projects with right-aligned text */
-    text-align: right;
-}
+/* work.html styling classes goes herrrr */
 
-/* ——————— PROJECTS LIST LINK STYLING ——————— */
-
-.red a {
-  color: #ED0C16;
-  text-decoration: none;
-  background-image: linear-gradient(#F9F5F1, #F9F5F1),
-    linear-gradient(#37352F, #37352F),
-    linear-gradient(#ED0C16, #ED0C16);
-  background-size: 20px 2px, 100% 2px, 0 2px;
-  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 2s linear, background-position 2s linear;
-}
-
-.red a:hover {
-  background-size: 20px 2px, 0 2px, 100% 2px;
-  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
-  color: #ED0C16;
-}
-
-.orange a {
-  color: #37352F;
-  text-decoration: none;
-  background-image: linear-gradient(#F9F5F1, #F9F5F1),
-    linear-gradient(#37352F, #37352F),
-    linear-gradient(#D9730D, #D9730D);
-  background-size: 20px 2px, 100% 2px, 0 2px;
-  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 2s linear, background-position 2s linear;
-}
-
-.orange a:hover {
-  background-size: 20px 2px, 0 2px, 100% 2px;
-  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
-  color: #D9730D;
-}
-
-.yellow a {
-  color: #37352F;
-  text-decoration: none;
-  background-image: linear-gradient(#F9F5F1, #F9F5F1),
-    linear-gradient(#37352F, #37352F),
-    linear-gradient(#CB912F, #CB912F);
-  background-size: 20px 2px, 100% 2px, 0 2px;
-  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 2s linear, background-position 2s linear;
-}
-
-.yellow a:hover {
-  background-size: 20px 2px, 0 2px, 100% 2px;
-  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
-  color: #CB912F;
-}
-
-.green a {
-  color: #37352F;
-  text-decoration: none;
-  background-image: linear-gradient(#F9F5F1, #F9F5F1),
-    linear-gradient(#37352F, #37352F),
-    linear-gradient(#448361, #448361);
-  background-size: 20px 2px, 100% 2px, 0 2px;
-  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 2s linear, background-position 2s linear;
-}
-
-.green a:hover {
-  background-size: 20px 2px, 0 2px, 100% 2px;
-  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
-  color: #448361;
-}
-
-.blue a {
-  color: #37352F;
-  text-decoration: none;
-  background-image: linear-gradient(#F9F5F1, #F9F5F1),
-    linear-gradient(#37352F, #37352F),
-    linear-gradient(#337EA9, #337EA9);
-  background-size: 20px 2px, 100% 2px, 0 2px;
-  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 2s linear, background-position 2s linear;
-}
-
-.blue a:hover {
-  background-size: 20px 2px, 0 2px, 100% 2px;
-  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
-  color: #337EA9;
-}
-
-.purple a {
-  color: #9065B0;
-  text-decoration: none;
-  background-image: linear-gradient(#F9F5F1, #F9F5F1),
-    linear-gradient(#37352F, #37352F),
-    linear-gradient(#9065B0, #9065B0);
-  background-size: 20px 2px, 100% 2px, 0 2px;
-  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 2s linear, background-position 2s linear;
-}
-
-.purple a:hover {
-  background-size: 20px 2px, 0 2px, 100% 2px;
-  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
-  color: #9065B0;
-}
-
-/* ——————— FOOTER ——————— */
-
-.footer-img {
-    max-width: 22%;
-    margin-top: 111px;
+.h1-styling {
+    text-align: center;
+    padding-top: 8rem;
 }
 
