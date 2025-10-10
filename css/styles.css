@@ -122,7 +122,7 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: #E44031;
+  color: #1A0705;
 }
 
 /* mouse over link */
@@ -152,28 +152,7 @@ footer a {
     text-decoration-thickness: .2rem;
     text-underline-offset: .5rem;
 }
-/* unvisited link */
-footer a:link {
-  color: #E44031;
-}
 
-/* footer li a --- unvisited link */
-footer li a:link {
-  color: #1A0705;
-} 
-
-/* visited link */
-footer a:visited {
-  color: #1A0705;
-}
-/* mouse over link */
-footer a:hover {
-  color: #FF4837;
-}
-/* selected link */
-footer a:active {
-  color: #FF4837;
-}
 
 footer h1 {
     font-size: 4rem;
