@@ -156,9 +156,15 @@ footer a {
 footer a:link {
   color: #E44031;
 }
+
+/* footer li a --- unvisited link */
+footer li a:link {
+  color: #1A0705;
+} 
+
 /* visited link */
 footer a:visited {
-  color: #E44031;
+  color: #1A0705;
 }
 /* mouse over link */
 footer a:hover {
@@ -195,6 +201,7 @@ footer ul li {
 img {
     max-width: 100%;
 }
+
 
 /* Bootstrap icons, yay! */
 @import "bootstrap-icons/font/bootstrap-icons.css";
