@@ -95,12 +95,11 @@ nav ul li {
     text-decoration-thickness: 1px;
 }
 
+/* Nav URL styling */
 nav li a:hover {
     text-decoration: underline;
     text-underline-offset: .5rem;
 }
-
-
 nav a:link {
     text-decoration: none;
     color:#1A0705;
@@ -115,23 +114,34 @@ nav a:active {
     color: #FF4837;
 }
 
-/* unvisited link */
+/* Page URL styling */
 a:link {
   color: #E44031;
 }
-
-/* visited link */
 a:visited {
   color: #1A0705;
 }
-
-/* mouse over link */
 a:hover {
   color: #FF4837;
 }
-
-/* selected link */
 a:active {
+  color: #FF4837;
+}
+
+/* Footer social icon styling */
+.footer-socials a:link {
+    color: #1A0705;
+}
+
+.footer-socials a:visited {
+    color: #1A0705;
+}
+
+.footer-socials a:hover {
+  color: #E44031;
+}
+
+.footer-socials a:active {
   color: #FF4837;
 }
 
@@ -176,6 +186,11 @@ footer ul li {
     display: inline-block;
     padding-top: 2rem;
     padding-right: 3rem;
+}
+
+footer ul li a:visited {
+    /* visited link */
+  color: #1A0705;
 }
 
 footer p {
