@@ -195,6 +195,10 @@ footer ul li {
 img {
     max-width: 100%;
 }
+
+/* Bootstrap icons, yay! */
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
 /* Pangram Right Grotesk Mono */
 @font-face {
     font-family: 'PPRightGroteskMono-Regular';
