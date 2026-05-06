@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victoria H. Farr — Creative Brand Manager for Change-Makers</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231A0705'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-style='italic' font-size='20' fill='%23E44031'>V</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,300;1,6..72,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cauldron:   #1A0705;
+    --geranium:   #E44031;
+    --birch:      #E7D8C9;
+    --moonstone:  #F9F5F1;
+    --smoke:      #908E8E;
+    --white:      #FFFFFF;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--moonstone);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    color: var(--cauldron);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE TEXTURE OVERLAY ────────────────────────────── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+  }
+
+  /* ── LAYOUT ───────────────────────────────────────────── */
+  .page {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ── NAV ──────────────────────────────────────────────── */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0 1.75rem;
+    border-bottom: 0.5px solid rgba(26,7,5,0.12);
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .nav-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 0.5px solid rgba(26,7,5,0.15);
+    background: var(--birch);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    color: var(--smoke);
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .nav-mark {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+  }
+
+  .nav-mark:hover {
+    opacity: 1;
+  }
+
+  .nav-social {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .nav-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 0.5px solid rgba(26,7,5,0.2);
+    border-radius: 50%;
+    color: var(--smoke);
+    text-decoration: none;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .nav-icon:hover {
+    color: var(--geranium);
+    border-color: var(--geranium);
+  }
+
+  /* ── HERO ─────────────────────────────────────────────── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem 0 2.5rem;
+  }
+
+  .hero-left { }
+
+  .hero-photo {
+    width: 220px;
+    height: 280px;
+    border-radius: 9px;
+    border: 0.5px solid rgba(26,7,5,0.1);
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+    opacity: 0;
+    animation: fadeIn 0.9s ease forwards 0.5s;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--smoke);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards 0.1s;
+  }
+
+  .hero-greeting {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    line-height: 0.95;
+    color: var(--cauldron);
+    letter-spacing: -0.03em;
+    margin-bottom: 2.25rem;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.2s;
+  }
+
+  .hero-name {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    line-height: 0.95;
+    color: var(--geranium);
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.35s;
+  }
+
+  .hero-tagline {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--cauldron);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.5s;
+  }
+
+  .hero-tagline em {
+    font-style: italic;
+    font-family: 'Newsreader', serif;
+    font-weight: 300;
+    color: var(--geranium);
+    font-size: 1.35em;
+  }
+
+  .hero-sub {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    color: var(--smoke);
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.6s;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.75s;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    background: var(--birch);
+    color: var(--cauldron);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 9px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: var(--geranium);
+    color: var(--white);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    background: transparent;
+    border: 0.5px solid rgba(26,7,5,0.3);
+    color: var(--cauldron);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--geranium);
+    color: var(--geranium);
+  }
+
+  /* ── RIGHT SIDE ───────────────────────────────────────── */
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 0.9s ease forwards 0.6s;
+  }
+
+  /* Coming soon card */
+  .coming-soon-card {
+    background: var(--white);
+    border: 0.5px solid rgba(26,7,5,0.1);
+    border-radius: 9px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .coming-soon-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--geranium);
+  }
+
+  .card-eyebrow {
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--geranium);
+    margin-bottom: 0.75rem;
+  }
+
+  .card-headline {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: var(--cauldron);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-body {
+    font-size: 0.875rem;
+    color: var(--smoke);
+    line-height: 1.7;
+  }
+
+  /* Services list */
+  .services-card {
+    background: var(--birch);
+    border-radius: 9px;
+    padding: 1.5rem 2rem;
+  }
+
+  .services-label {
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--smoke);
+    margin-bottom: 1rem;
+  }
+
+  .services-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .services-list li {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--cauldron);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .services-list li::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--geranium);
+    flex-shrink: 0;
+  }
+
+  /* Mantra */
+  .mantra-strip {
+    padding: 2rem 0 0;
+  }
+
+  .mantra-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: var(--cauldron);
+    line-height: 1.5;
+  }
+
+  .mantra-text em {
+    font-style: italic;
+    font-family: 'Newsreader', serif;
+    font-weight: 300;
+    color: var(--geranium);
+    font-size: 1.35em;
+  }
+
+  /* ── SERVICES ROW ────────────────────────────────────── */
+  .services-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .services-card--light {
+    background: var(--white);
+    border: 0.5px solid rgba(26,7,5,0.1);
+    border-radius: 9px;
+    padding: 1.5rem 2rem;
+  }
+
+  .services-label--dark {
+    color: var(--smoke);
+  }
+
+  .services-list--dark li {
+    color: var(--cauldron);
+  }
+
+  .services-list--dark li::before {
+    background: var(--geranium);
+  }
+
+  /* ── MANTRA (full-width) ─────────────────────────────── */
+  .mantra-strip {
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  /* ── FOOTER ───────────────────────────────────────────── */
+  footer {
+    border-top: 0.5px solid rgba(26,7,5,0.12);
+    padding: 1.5rem 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-mark {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    color: var(--smoke);
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--smoke);
+    text-decoration: none;
+    padding: 0.3rem 0.7rem;
+    border: 0.5px solid transparent;
+    border-radius: 999px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .footer-link:hover {
+    color: var(--geranium);
+    border-color: rgba(228,64,49,0.3);
+  }
+
+  /* ── DECORATIVE ─────────────────────────────────────────*/
+  .deco-dot {
+    position: fixed;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(228,64,49,0.07) 0%, transparent 70%);
+    pointer-events: none;
+    bottom: -80px;
+    right: -80px;
+    z-index: 0;
+  }
+
+  /* ── ANIMATIONS ──────────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* ── RESPONSIVE ──────────────────────────────────────── */
+  @media (max-width: 680px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 3rem 0;
+    }
+    .hero-photo { width: 100%; height: 220px; order: -1; }
+    .coming-soon-card { padding: 1.5rem; }
+    .services-row { grid-template-columns: 1fr; }
+    footer { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="deco-dot"></div>
+
+<div class="page">
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-mark">
+      <svg height="36" viewBox="0 0 237 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M63.0269 49.4703L63.6479 44.8202C50.6078 40.3562 32.2379 46.0602 24.6829 49.4703C5.30916 58.5224 0.155239 85.9992 0 98.606C1.13842 110.8 9.99736 136.985 36.3258 144.177C62.6543 151.369 88.072 146.14 97.4898 142.627L96.7136 137.512C84.2945 141.48 65.6659 142.162 57.904 142.007C38.7786 142.007 23.7515 132.087 18.6287 127.126C0.124227 109.518 5.43339 83.9325 10.401 73.3407C23.5653 47.4243 50.97 46.6286 63.0269 49.4703Z" fill="#1A0705"/><path d="M104.786 140.612C104.413 139.868 104.32 136.478 104.32 134.877C117.609 129.296 124.657 124.285 126.519 122.476C127.265 125.576 127.244 127.798 127.14 128.521C121.428 133.605 109.857 138.7 104.786 140.612Z" fill="#1A0705"/><path d="M134.126 122.941L133.195 116.586C158.157 96.2499 165.019 66.1588 165.329 53.6553C167.44 52.2913 170.245 51.8469 171.383 51.7953C172.129 83.2917 146.856 112.35 134.126 122.941Z" fill="#1A0705"/><path d="M170.452 43.2701C167.471 43.6421 165.484 44.6651 164.863 45.1302C157.909 10.7816 127.296 4.98457 112.858 6.37962C81.1898 11.4637 70.5818 38.7751 69.2364 51.7953C66.1316 65.6834 79.8444 91.8892 87.0888 103.256C85.5985 103.628 83.3631 104.238 82.4317 104.496C64.9208 85.8958 63.8548 55.9287 65.5107 43.2701C69.1122 13.3856 100.232 1.98782 115.342 0.0244767C152.351 -0.967538 167.502 28.4416 170.452 43.2701Z" fill="#1A0705"/><path d="M92.5222 109.456C89.169 109.828 87.5028 110.748 87.0888 111.161C92.6774 119.593 104.424 128.005 109.598 131.157C111.834 130.785 113.531 129.245 114.1 128.521C101.557 120.337 94.4885 112.401 92.5222 109.456Z" fill="#1A0705"/><path d="M122.638 133.017C120.776 134.877 118.654 135.962 117.826 136.272C147.632 153.88 181.991 150.222 195.445 146.192C194.7 143.464 193.065 142.058 192.341 141.697C157.07 149.509 131.177 139.165 122.638 133.017Z" fill="#1A0705"/><path d="M203.828 143.867C203.456 142.503 201.5 139.992 200.568 138.907C227.145 128.118 232.444 103.514 231.771 92.5609C226.928 49.6563 190.012 46.0602 172.16 49.6253C147.197 55.7014 127.399 75.2007 120.62 84.1908C120.124 83.1988 118.033 80.5741 117.05 79.3857C130.711 59.0494 161.241 46.8352 174.799 43.2701C204.108 37.442 224.992 58.4087 231.771 69.6206C248.785 113.641 220.232 137.46 203.828 143.867Z" fill="#1A0705"/><path d="M116.274 91.6309C115.404 89.6469 113.324 87.1875 112.393 86.2058C106.183 94.0179 101.526 108.681 99.9736 115.036C100.719 117.64 103.285 118.911 104.476 119.221C109.567 100.497 114.463 93.0259 116.274 91.6309Z" fill="#1A0705"/><path d="M109.598 106.511L111.927 100.776C129.19 100.776 139.922 103.256 143.13 104.496L139.715 108.681C127.792 105.457 114.67 105.891 109.598 106.511Z" fill="#1A0705"/><path d="M129.779 108.061C127.668 107.565 125.381 107.441 124.501 107.441C128.724 121.081 128.745 131.415 128.227 134.877C130.338 136.365 132.419 136.427 133.195 136.272C134.064 123.251 131.28 112.04 129.779 108.061Z" fill="#1A0705"/><path d="M103.699 128.521L98.7317 124.801C95.8753 147.99 105.821 166.084 111.151 172.232L114.566 168.357C103.637 158.685 102.768 137.77 103.699 128.521Z" fill="#1A0705"/><path d="M101.06 106.976L103.234 100.776C65.728 107.472 42.3801 127.23 35.3944 136.272C36.1395 136.892 38.9131 137.357 40.2068 137.512C67.2804 113.455 92.0565 107.131 101.06 106.976Z" fill="#1A0705"/><path d="M70.6336 51.7953C70.3852 51.2992 71.2545 47.8685 71.7202 46.2152C107.86 60.9714 123.311 88.0142 126.519 99.691H121.707C110.406 72.2866 82.9491 56.342 70.6336 51.7953Z" fill="#1A0705"/><path d="M132.419 144.487L127.606 142.627C124.377 158.375 115.291 170.165 111.151 174.092C94.1367 189.344 72.4964 191.814 63.8031 191.142C31.265 188.538 31.3064 159.78 35.3944 145.727L30.582 144.177C18.9081 170.589 35.4461 187.422 45.1744 192.537C102.551 208.782 127.244 167.272 132.419 144.487Z" fill="#1A0705"/><path d="M116.274 178.277L119.378 174.092C156.636 207.821 185.614 191.866 195.445 179.672C206.498 161.32 198.291 145.262 192.806 139.527C177.158 121.794 156.48 113.228 148.098 111.161L151.513 106.976C183.802 116.896 199.844 138.287 203.828 147.742C208.796 167.582 200.309 182.359 195.445 187.267C164.149 214.052 129.624 192.434 116.274 178.277Z" fill="#1A0705"/>
+      </svg>
+    </a>
+    <div class="nav-social">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/victoriafarr.creative/" target="_blank" rel="noopener" class="footer-link" aria-label="Instagram">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        Instagram
+      </a>
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/victoriahamiltonfarr" target="_blank" rel="noopener" class="footer-link" aria-label="Facebook">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        Facebook
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/victoriahfarr/" target="_blank" rel="noopener" class="footer-link" aria-label="LinkedIn">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <!-- Figma -->
+      <a href="https://www.figma.com/@victoriafarr" target="_blank" rel="noopener" class="footer-link" aria-label="Figma Community">
+        <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 11px; line-height: 1;">F</span>
+        Figma
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Creative Brand Manager <span style="color: var(--geranium);">✦</span> Virginia Beach, VA</p>
+      <p class="hero-greeting">Hiya!</p>
+      <p class="hero-name">I'm Victoria.</p>
+      <p class="hero-tagline">I'm a creative brand manager for <em>change-makers.</em></p>
+      <p class="hero-sub">I help nonprofits and soul-driven entrepreneurs develop cohesive visual identities and deploy them strategically across platforms — turning vision into resonant, recognizable brands.</p>
+      <div class="hero-actions">
+        <a href="mailto:victoriafarr@gmail.com" class="btn-primary">
+          Let's work together
+        </a>
+      </div>
+    </div>
+
+    <img src="images/2026_VF_Profile_Image_-_GitHub_Pages.png" alt="Victoria H. Farr" class="hero-photo">
+  </section>
+
+  <!-- COMING SOON -->
+  <div class="coming-soon-card" style="margin-bottom: 1.25rem;">
+    <p class="card-eyebrow">Portfolio · Coming Soon</p>
+    <h2 class="card-headline">Something beautiful<br>is brewing.</h2>
+    <p class="card-body">A full portfolio site is in the works — case studies, client work, and a whole lot of intentionality. In the meantime, find me on LinkedIn or Instagram to see what I'm up to right now.</p>
+  </div>
+
+  <!-- SERVICES ROW -->
+  <div class="services-row">
+    <div class="services-card">
+      <p class="services-label">I personally execute</p>
+      <ul class="services-list">
+        <li>Brand strategy + visual identity</li>
+        <li>Brand guidelines + audits</li>
+        <li>Print + digital collateral</li>
+        <li>Social templates + campaign direction</li>
+        <li>Asset management + stewardship</li>
+        <li>Web design</li>
+      </ul>
+    </div>
+    <div class="services-card services-card--light">
+      <p class="services-label services-label--dark">I direct + collaborate on</p>
+      <ul class="services-list services-list--dark">
+        <li>Copywriting</li>
+        <li>Web development</li>
+        <li>Photography + videography</li>
+        <li>Motion graphics</li>
+        <li>Complex publication design</li>
+        <li>Budget management</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MANTRA -->
+  <div class="mantra-strip">
+    <p class="mantra-text">Listening <em>deeply,</em> designing <em>intentionally,</em> and creating visuals that <em>resonate.</em></p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-mark">© 2026 <span style="color: var(--geranium);">✦</span> Victoria H. Farr</span>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/victoriafarr.creative/" target="_blank" rel="noopener" class="footer-link">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.facebook.com/victoriahamiltonfarr" target="_blank" rel="noopener" class="footer-link">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        Facebook
+      </a>
+      <a href="https://www.linkedin.com/in/victoriahfarr/" target="_blank" rel="noopener" class="footer-link">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://www.figma.com/@victoriafarr" target="_blank" rel="noopener" class="footer-link">
+        <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 11px; line-height: 1;">F</span>
+        Figma
+      </a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
