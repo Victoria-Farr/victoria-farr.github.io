@@ -30,7 +30,6 @@
     overflow-x: hidden;
   }
 
-  /* ── NOISE TEXTURE OVERLAY ────────────────────────────── */
   body::before {
     content: '';
     position: fixed;
@@ -42,7 +41,6 @@
     opacity: 0.6;
   }
 
-  /* ── LAYOUT ───────────────────────────────────────────── */
   .page {
     position: relative;
     z-index: 1;
@@ -54,39 +52,13 @@
     padding: 0 2rem;
   }
 
-  /* ── NAV ──────────────────────────────────────────────── */
+  /* ── NAV ── */
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0 1.75rem;
     border-bottom: 0.5px solid rgba(26,7,5,0.12);
-  }
-
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-  }
-
-  .nav-avatar {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 0.5px solid rgba(26,7,5,0.15);
-    background: var(--birch);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    flex-shrink: 0;
-    color: var(--smoke);
-    font-size: 0.625rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1.3;
   }
 
   .nav-mark {
@@ -96,10 +68,7 @@
     opacity: 0.9;
     transition: opacity 0.2s;
   }
-
-  .nav-mark:hover {
-    opacity: 1;
-  }
+  .nav-mark:hover { opacity: 1; }
 
   .nav-social {
     display: flex;
@@ -107,25 +76,25 @@
     align-items: center;
   }
 
-  .nav-icon {
+  .footer-link {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border: 0.5px solid rgba(26,7,5,0.2);
-    border-radius: 50%;
+    gap: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 400;
     color: var(--smoke);
     text-decoration: none;
+    padding: 0.3rem 0.7rem;
+    border: 0.5px solid transparent;
+    border-radius: 999px;
     transition: color 0.2s, border-color 0.2s;
   }
-
-  .nav-icon:hover {
+  .footer-link:hover {
     color: var(--geranium);
-    border-color: var(--geranium);
+    border-color: rgba(228,64,49,0.3);
   }
 
-  /* ── HERO ─────────────────────────────────────────────── */
+  /* ── HERO ── */
   .hero {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -133,8 +102,6 @@
     align-items: center;
     padding: 4rem 0 2.5rem;
   }
-
-  .hero-left { }
 
   .hero-photo {
     width: 275px;
@@ -161,7 +128,6 @@
 
   .hero-greeting {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-style: normal;
     font-weight: 400;
     font-size: clamp(3.5rem, 8vw, 6.5rem);
     line-height: 0.95;
@@ -194,7 +160,6 @@
     opacity: 0;
     animation: fadeUp 0.7s ease forwards 0.5s;
   }
-
   .hero-tagline em {
     font-style: italic;
     font-family: 'Newsreader', serif;
@@ -237,45 +202,12 @@
     border-radius: 9px;
     transition: background 0.2s, color 0.2s;
   }
-
   .btn-primary:hover {
     background: var(--geranium);
     color: var(--white);
   }
 
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.7rem 1.5rem;
-    background: transparent;
-    border: 0.5px solid rgba(26,7,5,0.3);
-    color: var(--cauldron);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.8125rem;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 2px;
-    transition: border-color 0.2s, color 0.2s;
-  }
-
-  .btn-secondary:hover {
-    border-color: var(--geranium);
-    color: var(--geranium);
-  }
-
-  /* ── RIGHT SIDE ───────────────────────────────────────── */
-  .hero-right {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    opacity: 0;
-    animation: fadeIn 0.9s ease forwards 0.6s;
-  }
-
-  /* ── BANNER IMAGE ────────────────────────────────────── */
+  /* ── BANNER ── */
   .banner-placeholder {
     width: 100%;
     height: 320px;
@@ -287,7 +219,6 @@
     align-items: center;
     justify-content: center;
   }
-
   .banner-img {
     width: 100%;
     height: 100%;
@@ -296,68 +227,114 @@
     display: block;
   }
 
-  .banner-label {
-    position: absolute;
+  /* ── PORTFOLIO SECTION ── */
+  .portfolio-section {
+    margin-bottom: 3rem;
+  }
+
+  .portfolio-eyebrow {
     font-size: 0.625rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--smoke);
-    display: none;
+    margin-bottom: 0;
+    padding-bottom: 0.6rem;
+    border-bottom: 0.5px solid rgba(26,7,5,0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
-  .banner-empty .banner-label {
-    display: block;
+
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
-  /* Coming soon card */
-  .coming-soon-card {
-    background: var(--white);
-    border: 0.5px solid rgba(26,7,5,0.1);
-    border-radius: 9px;
-    padding: 2rem;
+  .portfolio-item {
+    border-bottom: 0.5px solid rgba(26,7,5,0.15);
+    padding: 1rem 1.5rem 1rem 0;
+    cursor: default;
     position: relative;
-    overflow: hidden;
+    transition: background 0.15s;
   }
 
-  .coming-soon-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--geranium);
+  .portfolio-item:nth-child(3n) {
+    padding-right: 0;
   }
 
-  .card-eyebrow {
-    font-size: 0.625rem;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--geranium);
-    margin-bottom: 0.75rem;
+  .portfolio-year {
+    font-size: 0.6875rem;
+    font-weight: 400;
+    color: var(--smoke);
+    margin-bottom: 0.25rem;
+    display: block;
+    letter-spacing: 0.04em;
   }
 
-  .card-headline {
+  .portfolio-title {
     font-family: 'Newsreader', serif;
     font-style: italic;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--cauldron);
-    line-height: 1.2;
-    margin-bottom: 0.75rem;
+    line-height: 1.35;
+    margin-bottom: 0.2rem;
+    transition: color 0.2s;
   }
 
-  .card-body {
-    font-size: 0.875rem;
+  .portfolio-desc {
+    font-size: 0.75rem;
+    font-weight: 400;
     color: var(--smoke);
-    line-height: 1.7;
+    line-height: 1.5;
   }
 
-  /* Services list */
+  .portfolio-item:hover .portfolio-title {
+    color: var(--geranium);
+  }
+
+  /* ── HOVER IMAGE ── */
+  .hover-image {
+    position: fixed;
+    width: 200px;
+    height: 240px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 999;
+    transform: translate(-50%, -60%);
+  }
+
+  .hover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 0.5px solid rgba(26,7,5,0.1);
+  }
+
+  .hover-image.visible { opacity: 1; }
+
+  /* ── SERVICES ROW ── */
+  .services-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
   .services-card {
     background: var(--birch);
+    border-radius: 9px;
+    padding: 1.5rem 2rem;
+  }
+
+  .services-card--light {
+    background: var(--white);
+    border: 0.5px solid rgba(26,7,5,0.1);
     border-radius: 9px;
     padding: 1.5rem 2rem;
   }
@@ -397,8 +374,10 @@
     flex-shrink: 0;
   }
 
-  /* Mantra */
+  /* ── MANTRA ── */
   .mantra-strip {
+    margin-bottom: 2.5rem;
+    text-align: center;
     padding: 2rem 0 0;
   }
 
@@ -418,40 +397,7 @@
     font-size: 1.35em;
   }
 
-  /* ── SERVICES ROW ────────────────────────────────────── */
-  .services-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.75rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .services-card--light {
-    background: var(--white);
-    border: 0.5px solid rgba(26,7,5,0.1);
-    border-radius: 9px;
-    padding: 1.5rem 2rem;
-  }
-
-  .services-label--dark {
-    color: var(--smoke);
-  }
-
-  .services-list--dark li {
-    color: var(--cauldron);
-  }
-
-  .services-list--dark li::before {
-    background: var(--geranium);
-  }
-
-  /* ── MANTRA (full-width) ─────────────────────────────── */
-  .mantra-strip {
-    margin-bottom: 2.5rem;
-    text-align: center;
-  }
-
-  /* ── FOOTER ───────────────────────────────────────────── */
+  /* ── FOOTER ── */
   footer {
     border-top: 0.5px solid rgba(26,7,5,0.12);
     padding: 1.5rem 0 2rem;
@@ -464,7 +410,6 @@
 
   .footer-mark {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-style: normal;
     font-weight: 400;
     font-size: 0.9375rem;
     color: var(--smoke);
@@ -477,26 +422,6 @@
     flex-wrap: wrap;
   }
 
-  .footer-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
-    font-size: 0.75rem;
-    font-weight: 400;
-    color: var(--smoke);
-    text-decoration: none;
-    padding: 0.3rem 0.7rem;
-    border: 0.5px solid transparent;
-    border-radius: 999px;
-    transition: color 0.2s, border-color 0.2s;
-  }
-
-  .footer-link:hover {
-    color: var(--geranium);
-    border-color: rgba(228,64,49,0.3);
-  }
-
-  /* ── DECORATIVE ─────────────────────────────────────────*/
   .deco-dot {
     position: fixed;
     width: 320px;
@@ -509,7 +434,6 @@
     z-index: 0;
   }
 
-  /* ── ANIMATIONS ──────────────────────────────────────── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -519,7 +443,6 @@
     to   { opacity: 1; }
   }
 
-  /* ── RESPONSIVE ──────────────────────────────────────── */
   @media (max-width: 680px) {
     .hero {
       grid-template-columns: 1fr;
@@ -527,7 +450,8 @@
       padding: 3rem 0;
     }
     .hero-photo { width: 100%; height: 220px; order: -1; }
-    .coming-soon-card { padding: 1.5rem; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .portfolio-item { padding-right: 0; }
     .services-row { grid-template-columns: 1fr; }
     footer { flex-direction: column; align-items: flex-start; }
   }
@@ -547,22 +471,18 @@
       </svg>
     </a>
     <div class="nav-social">
-      <!-- Instagram -->
       <a href="https://www.instagram.com/victoriafarr.creative/" target="_blank" rel="noopener" class="footer-link" aria-label="Instagram">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
         Instagram
       </a>
-      <!-- Facebook -->
       <a href="https://www.facebook.com/victoriahamiltonfarr" target="_blank" rel="noopener" class="footer-link" aria-label="Facebook">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
         Facebook
       </a>
-      <!-- LinkedIn -->
       <a href="https://www.linkedin.com/in/victoriahfarr/" target="_blank" rel="noopener" class="footer-link" aria-label="LinkedIn">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         LinkedIn
       </a>
-      <!-- Pexels -->
       <a href="https://www.pexels.com/@victoriahfarr/" target="_blank" rel="noopener" class="footer-link" aria-label="Pexels">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8.75a3.25 3.25 0 100 6.5 3.25 3.25 0 000-6.5zm0 5a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM9.5 3.5L8.086 5H5A2.5 2.5 0 002.5 7.5v10A2.5 2.5 0 005 20h14a2.5 2.5 0 002.5-2.5v-10A2.5 2.5 0 0019 5h-3.086L14.5 3.5h-5zm0-1.5h5a1 1 0 01.707.293L16.914 3.5H19A4 4 0 0123 7.5v10a4 4 0 01-4 4H5a4 4 0 01-4-4v-10A4 4 0 015 3.5h2.086L8.793 2.293A1 1 0 019.5 2z"/></svg>
         Pexels
@@ -578,28 +498,54 @@
       <p class="hero-tagline">I'm a creative brand manager for <em>change-makers.</em></p>
       <p class="hero-sub">I help nonprofits and soul-driven entrepreneurs develop cohesive visual identities and deploy them strategically across platforms — turning vision into resonant, recognizable brands.</p>
       <div class="hero-actions">
-        <a href="mailto:victoriafarr@gmail.com" class="btn-primary">
-          Let's work together
-        </a>
+        <a href="mailto:victoriahfarr@gmail.com" class="btn-primary">Let's work together</a>
       </div>
     </div>
-
     <img src="images/VF-hero-image.png" alt="Victoria H. Farr" class="hero-photo">
   </section>
 
-  <!-- HERO BANNER IMAGE -->
-  <div class="banner-placeholder">
-    <video class="banner-img" autoplay loop muted playsinline>
-      <source src="images/VF-banner-mission.mp4" type="video/mp4">
-    </video>
-    <span class="banner-label">featured work · coming soon</span>
-  </div>
+  <!-- RECENT WORK -->
+  <div class="portfolio-section">
+    <p class="portfolio-eyebrow">Recent Work</p>
+    <div class="portfolio-grid" id="portfolioGrid">
 
-  <!-- COMING SOON -->
-  <div class="coming-soon-card" style="margin-bottom: 1.25rem;">
-    <p class="card-eyebrow">Portfolio · Coming Soon</p>
-    <h2 class="card-headline">Something beautiful<br>is brewing.</h2>
-    <p class="card-body">A full portfolio site is in the works — case studies, client work, and a whole lot of intentionality. In the meantime, find me on LinkedIn or Instagram to see what I'm up to right now.</p>
+      <div class="portfolio-item" data-img="https://images.unsplash.com/photo-1596526131083-e8c633064cdd?w=400&q=80">
+        <span class="portfolio-year">2025</span>
+        <div class="portfolio-title">Jannell C. Smith for School Board</div>
+        <div class="portfolio-desc">Full campaign identity — strategy, visual system, print collateral, and social templates from the ground up</div>
+      </div>
+
+      <div class="portfolio-item" data-img="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&q=80">
+        <span class="portfolio-year">2025</span>
+        <div class="portfolio-title">Victoria H. Farr — Personal Brand</div>
+        <div class="portfolio-desc">End-to-end brand development: identity, web presence, email system, and LinkedIn strategy</div>
+      </div>
+
+      <div class="portfolio-item" data-img="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=400&q=80">
+        <span class="portfolio-year">Ongoing</span>
+        <div class="portfolio-title">COVA Coalition</div>
+        <div class="portfolio-desc">Nonprofit brand stewardship — campaign collateral, asset management, and community-facing materials</div>
+      </div>
+
+      <div class="portfolio-item" data-img="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&q=80">
+        <span class="portfolio-year">2024</span>
+        <div class="portfolio-title">Brand Audit + Identity System</div>
+        <div class="portfolio-desc">Comprehensive brand audit, guidelines documentation, and visual identity refresh for a mission-driven org</div>
+      </div>
+
+      <div class="portfolio-item" data-img="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&q=80">
+        <span class="portfolio-year">2024</span>
+        <div class="portfolio-title">Social Template Suite</div>
+        <div class="portfolio-desc">Canva template system designed for team usability — on-brand, adaptable, and built for ongoing stewardship</div>
+      </div>
+
+      <div class="portfolio-item" data-img="https://images.unsplash.com/photo-1542744094-24638eff58bb?w=400&q=80">
+        <span class="portfolio-year">2023</span>
+        <div class="portfolio-title">Campaign Direction</div>
+        <div class="portfolio-desc">Art direction across print and digital — photography brief, layout, and cross-platform asset rollout</div>
+      </div>
+
+    </div>
   </div>
 
   <!-- SERVICES ROW -->
@@ -616,8 +562,8 @@
       </ul>
     </div>
     <div class="services-card services-card--light">
-      <p class="services-label services-label--dark">I direct + collaborate on</p>
-      <ul class="services-list services-list--dark">
+      <p class="services-label">I direct + collaborate on</p>
+      <ul class="services-list">
         <li>Copywriting</li>
         <li>Web development</li>
         <li>Photography + videography</li>
@@ -657,6 +603,35 @@
   </footer>
 
 </div>
+
+<!-- HOVER IMAGE ELEMENT -->
+<div class="hover-image" id="hoverImg">
+  <img id="hoverImgEl" src="" alt="" />
+</div>
+
+<script>
+  const hoverImg = document.getElementById('hoverImg');
+  const hoverImgEl = document.getElementById('hoverImgEl');
+  const items = document.querySelectorAll('.portfolio-item');
+
+  document.addEventListener('mousemove', e => {
+    hoverImg.style.left = e.clientX + 'px';
+    hoverImg.style.top = e.clientY + 'px';
+  });
+
+  items.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      const src = item.dataset.img;
+      if (src) {
+        hoverImgEl.src = src;
+        hoverImg.classList.add('visible');
+      }
+    });
+    item.addEventListener('mouseleave', () => {
+      hoverImg.classList.remove('visible');
+    });
+  });
+</script>
 
 </body>
 </html>
