@@ -1,7 +1,5 @@
 # Victoria H. Farr — Creative Brand Manager
 
-Placeholder site for **[victoria-farr.github.io](https://victoria-farr.github.io/)** while the full portfolio is in development.
-
 ---
 
 ### 🔗 Live Site
