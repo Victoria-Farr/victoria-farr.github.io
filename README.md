@@ -22,5 +22,4 @@ images/
 ### 🛠 Built With
 
 - HTML & CSS (no frameworks)
-- [Google Fonts](https://fonts.google.com/) — Newsreader + Plus Jakarta Sans
 - Hosted via [GitHub Pages](https://pages.github.com/)
