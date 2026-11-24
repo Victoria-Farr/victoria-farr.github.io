@@ -462,62 +462,158 @@ a:visited { color: var(--dark); }
     letter-spacing: .04em;
 }
 
-/* ---- CONTACT PAGE ----------------------------------------- */
-.contact-layout {
-    padding: 6rem var(--page-pad);
-    max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
+/* ---- CONTACT PAGE (combined About + Contact) -------------- */
+.contact-hero {
+    padding: var(--grid-gap);
+    padding-bottom: 0;
 }
 
-.contact-cta {
-    font-size: clamp(2.25rem, 6vw, 4rem);
+.contact-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contact-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    padding: 5rem var(--page-pad) 16rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.contact-left .section-label {
+    margin-bottom: 1.5rem;
+}
+
+.expertise-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expertise-list li {
+    font-size: clamp(0.7rem, 1.25vw, 1rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    line-height: 1.2;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid rgba(26,7,5,0.12);
+}
+
+.expertise-list li:first-child {
+    border-top: 1px solid rgba(26,7,5,0.12);
+}
+
+.expertise-list li:last-child {
+    border-bottom: none;
+}
+
+.contact-left .section-label {
+    margin-top: 2rem;
+}
+
+.expertise-detail {
+    color: var(--dark);
+    font-weight: 300;
+}
+
+.contact-bio {
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.8;
+    opacity: 0.85;
+    margin: 0 0 1.25rem;
+}
+
+.contact-h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 700;
     line-height: 1.1;
-    margin: 0 0 1rem;
+    margin: 0 0 1.25rem;
 }
 
-.contact-cta em {
-    font-style: italic;
-    color: var(--coral);
+.contact-callout {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.4;
+    margin: 0 0 1.5rem;
 }
 
-.contact-email {
-    font-size: 1.25rem;
-    display: inline-block;
-    margin: 1.5rem 0;
+.contact-subhead {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.4;
+    margin: 0.25rem 0 1.25rem;
+}
+
+.contact-sign-off {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 1.75rem 0 0.5rem;
+    line-height: 1.4;
+}
+
+.contact-details {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-detail-label {
+    font-size: 0.7rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin: 0 0 0.25rem;
+}
+
+.contact-detail-value {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 500;
     color: var(--dark);
     text-decoration: none;
-    border-bottom: 1px solid var(--dark);
+    border-bottom: 1px solid rgba(26,7,5,0.3);
     padding-bottom: 2px;
+    margin-top: 2rem;
     transition: color 0.2s, border-color 0.2s;
+    display: inline-block;
 }
 
-.contact-email:hover {
+.contact-detail-value:hover {
     color: var(--coral);
     border-color: var(--coral);
 }
 
-.contact-email:visited { color: var(--dark); }
+.contact-detail-value:visited { color: var(--dark); }
 
-.contact-socials {
-    list-style: none;
-    padding: 0;
-    margin: 2.5rem 0 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.contact-socials a {
-    color: var(--dark);
-    font-size: 1.5rem;
+.contact-cta-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.9rem 2rem;
+    background: var(--dark);
+    color: var(--cream);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
     text-decoration: none;
-    transition: color 0.2s;
+    transition: background 0.2s;
 }
 
-.contact-socials a:hover { color: var(--coral); }
-.contact-socials a:visited { color: var(--dark); }
+.contact-cta-btn:hover {
+    background: var(--coral);
+    color: var(--cream);
+}
+
+.contact-cta-btn:visited { color: var(--cream); }
 
 /* ---- FOOTER ----------------------------------------------- */
 .site-footer {
@@ -572,6 +668,8 @@ a:visited { color: var(--dark); }
 
     .about-hero { grid-template-columns: 1fr; gap: 2rem; }
     .about-photo { aspect-ratio: 4 / 3; order: -1; }
+
+    .contact-body { grid-template-columns: 1fr; gap: 3rem; padding: 3rem var(--page-pad); }
 
     .capabilities-grid { grid-template-columns: 1fr; }
 
