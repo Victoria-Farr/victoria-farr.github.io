@@ -463,6 +463,8 @@ a:visited { color: var(--dark); }
 }
 
 /* ---- CONTACT PAGE (combined About + Contact) -------------- */
+.contact-mobile-divider { display: none; }
+
 .contact-hero {
     padding: var(--grid-gap);
     padding-bottom: 0;
@@ -675,7 +677,8 @@ a:visited { color: var(--dark); }
 
     .contact-body { grid-template-columns: 1fr; gap: 3rem; padding: 3rem var(--page-pad) 6rem; }
     .contact-right { order: 1; }
-    .contact-left { order: 2; }
+    .contact-mobile-divider { order: 2; display: block; height: 32px; width: auto; margin: 0 auto; }
+    .contact-left { order: 3; }
 
     .capabilities-grid { grid-template-columns: 1fr; }
 
