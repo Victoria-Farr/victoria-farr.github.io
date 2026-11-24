@@ -659,6 +659,10 @@ a:visited { color: var(--dark); }
 @media (max-width: 768px) {
     :root { --header-height: 60px; }
 
+    .site-name-secondary { display: none; }
+    .site-name-symbol { display: none; }
+    .site-id { flex-shrink: 1; min-width: 0; }
+
     .header-nav { gap: 1rem; }
     .nav-links { gap: 1rem; }
     .nav-divider { display: none; }
@@ -669,7 +673,9 @@ a:visited { color: var(--dark); }
     .about-hero { grid-template-columns: 1fr; gap: 2rem; }
     .about-photo { aspect-ratio: 4 / 3; order: -1; }
 
-    .contact-body { grid-template-columns: 1fr; gap: 3rem; padding: 3rem var(--page-pad); }
+    .contact-body { grid-template-columns: 1fr; gap: 3rem; padding: 3rem var(--page-pad) 6rem; }
+    .contact-right { order: 1; }
+    .contact-left { order: 2; }
 
     .capabilities-grid { grid-template-columns: 1fr; }
 
