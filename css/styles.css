@@ -679,6 +679,7 @@ a:visited { color: var(--dark); }
     .contact-right { order: 1; }
     .contact-mobile-divider { order: 2; display: block; height: 32px; width: auto; margin: 0 auto; }
     .contact-left { order: 3; }
+    .contact-right .contact-detail-value { display: block; text-align: center; }
 
     .capabilities-grid { grid-template-columns: 1fr; }
 
